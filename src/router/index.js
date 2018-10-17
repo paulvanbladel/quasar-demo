@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
 import routes from './routes'
-import store from '../store'
 Vue.use(VueRouter)
 
 /*
@@ -19,11 +17,6 @@ export default function (/* { store, ssrContext } */) {
     // quasar.conf.js -> build -> vueRouterMode
     mode: process.env.VUE_ROUTER_MODE,
     base: process.env.VUE_ROUTER_BASE
-  })
-  Router.beforeEach((to, from, next) => {
-    console.log('before each')
-    console.log(store.state.example.test)
-    next()
   })
   return Router
 }
